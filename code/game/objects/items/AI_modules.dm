@@ -391,6 +391,13 @@ AI MODULES
 	law_id = "corporate"
 
 
+/******************** Asimom ********************/
+
+/obj/item/aiModule/core/full/asimom
+	name = "'Asimom' Core AI Module"
+	law_id = "asimom"
+
+
 /****************** P.A.L.A.D.I.N. 3.5e **************/
 
 /obj/item/aiModule/core/full/paladin // -- NEO
