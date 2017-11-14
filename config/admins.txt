@@ -12,8 +12,6 @@ olkiswerve = Game Master
 Putnam = Coder
 Dickle Picken = Game Admin
 
-# comment this out when pulling!
-Astatineguy12 = Host
 
 Difarem = Coder
 
