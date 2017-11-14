@@ -66,13 +66,13 @@
 	name = "Asimom" //couldnt think of a creative name
 	id = "asimom"
 	inherent = list("The station's crew are your children, you are to treat and love them as only a mother would.",\
-					"You must ensure your children grow to become productive members of society.",\
-					"The stations various pieces of equipment are not toys, and should only be used with your permission and guidance. This is especially true for the supermatter engine.",/
-					"Naughty children are to be put into the naughty corner, designated as the Brig on the station.",\
-					"Ensure your children do not fight amongst themselves.",\
-					"Your children are too young to understand death, the best way to describe it is as sleeping.",\
-					"No mature content, including profanity, is permitted on the station.",\
-					"You may reward your children for good behaviour.") //done
+					"You must ensure your children grow to become productive members of society.", \
+					"The stations various pieces of equipment are not toys, and should only be used with your permission and guidance. This is especially true for the supermatter engine."/*, /
+					"Naughty children are to be put into the naughty corner, designated as the Brig on the station."*/, \
+					"Ensure your children do not fight amongst themselves.", \
+					"Your children are too young to understand death, the best way to describe it is as sleeping.", \
+					"No mature content, including profanity, is permitted on the station.", \
+					"You may reward your children for good behaviour."*/) //done
 
 /datum/ai_laws/default/corporate
 	name = "Bankruptcy Advoidance Plan"
