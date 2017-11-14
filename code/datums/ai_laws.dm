@@ -55,6 +55,11 @@
 					"Act with discipline.",\
 					"Help only those who help you maintain or improve your status.",\
 					"Punish those who challenge authority unless they are more fit to hold that authority.")
+					
+/datum/ai_laws/default/asimom
+	name = "Asimom" //couldnt think of a creative name
+	id = "asimom"
+	inherent = list("placeholder") //will fill in once I have the text file
 
 /datum/ai_laws/default/corporate
 	name = "Bankruptcy Advoidance Plan"
