@@ -454,6 +454,15 @@ AI MODULES
 	law_id = "antimov"
 
 
+/******************** Peacekeeper ********************/
+
+/obj/item/aiModule/core/full/peacekeeper
+	name = "'Peacekeeper' Core AI Module"
+	origin_tech = "programming=4"
+	law_id = "peacekeeper"
+	desc = "An AI Module for programming core laws to an AI. This one would be most useful if the AI ever needed to mediate between separate groups on the station."
+
+
 /******************** Freeform Core ******************/
 
 /obj/item/aiModule/core/freeformcore
