@@ -110,6 +110,33 @@
 	materials = list(MAT_GLASS = 1000, MAT_DIAMOND = 100)
 	build_path = /obj/item/aiModule/core/full/asimov
 	category = list("AI Modules")
+	
+/datum/design/board/human
+	name = "Core Module Design (Human)"
+	desc = "Allows for the construction of a Human AI Core Module."
+	id = "human_module"
+	req_tech = list("programming" = 4, "materials" = 5)
+	materials = list(MAT_GLASS = 1000, MAT_URANIUM = 100)
+	build_path = /obj/item/aiModule/core/full/human
+	category = list("AI Modules")
+	
+/datum/design/board/asimom
+	name = "Core Module Design (Asimom)"
+	desc = "Allows for the construction of a Asimom AI Core Module."
+	id = "asimom_module"
+	req_tech = list("programming" = 4, "materials" = 5)
+	materials = list(MAT_GLASS = 1000, MAT_DIAMOND = 100)
+	build_path = /obj/item/aiModule/core/full/asimom
+	category = list("AI Modules")
+	
+/datum/design/board/peacekeeper
+	name = "Core Module Design (Peacekeeper)"
+	desc = "Allows for the construction of a Peacekeeper AI Core Module."
+	id = "peacekeeper_module"
+	req_tech = list("programming" = 4, "materials" = 5)
+	materials = list(MAT_GLASS = 1000, MAT_DIAMOND = 100)
+	build_path = /obj/item/aiModule/core/full/peacekeeper
+	category = list("AI Modules")
 
 /datum/design/board/paladin_module
 	name = "Core Module Design (P.A.L.A.D.I.N.)"
