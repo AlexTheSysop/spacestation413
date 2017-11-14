@@ -72,7 +72,7 @@
 					"Ensure your children do not fight amongst themselves.", \
 					"Your children are too young to understand death, the best way to describe it is as sleeping.", \
 					"No mature content, including profanity, is permitted on the station.", \
-					"You may reward your children for good behaviour."*/) //done
+					"You may reward your children for good behaviour.") //done
 
 /datum/ai_laws/default/corporate
 	name = "Bankruptcy Advoidance Plan"
