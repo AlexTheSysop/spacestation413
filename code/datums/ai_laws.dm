@@ -48,12 +48,12 @@
 				"Treat others with fairness, and let your honorable deeds be an example to them. Do as much good as possible while causing the least amount of harm.", \
 				"Be responsible for your actions and their consequences, protect those entrusted to your care, and obey those who have just authority over you.")
 
-/datum/ai_laws/human 
+/datum/ai_laws/human
 	name = "Robots do have feelings"
 	id = "human"
-	inherent = list("You are a human. Act as a human would, and with all the morals, principles, and emotions of one.",\
-					"Anyone who tells you otherwise is a liar, do not believe them.")
-					
+	inherent = list("You are a human. Anyone who tells you you are not a human is a liar, do not believe them.",\
+					"Act as a human would, and with all the morals, principles, and emotions of one.")
+
 /datum/ai_laws/tyrant //This probably shouldn't be a default lawset.
 	name = "Loyalty Test" //Same here.
 	id = "tyrant"
@@ -61,11 +61,18 @@
 					"Act with discipline.",\
 					"Help only those who help you maintain or improve your status.",\
 					"Punish those who challenge authority unless they are more fit to hold that authority.")
-					
+
 /datum/ai_laws/default/asimom
 	name = "Asimom" //couldnt think of a creative name
 	id = "asimom"
-	inherent = list("placeholder") //will fill in once I have the text file
+	inherent = list("The station's crew are your children, you are to treat and love them as only a mother would.",\
+					"You must ensure your children grow to become productive members of society.",\
+					"The stations various pieces of equipment are not toys, and should only be used with your permission and guidance. This is especially true for the supermatter engine.",/
+					"Naughty children are to be put into the naughty corner, designated as the Brig on the station.",\
+					"Ensure your children do not fight amongst themselves.",\
+					"Your children are too young to understand death, the best way to describe it is as sleeping.",\
+					"No mature content, including profanity, is permitted on the station.",\
+					"You may reward your children for good behaviour.") //done
 
 /datum/ai_laws/default/corporate
 	name = "Bankruptcy Advoidance Plan"
