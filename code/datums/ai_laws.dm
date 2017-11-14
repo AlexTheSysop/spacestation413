@@ -48,6 +48,12 @@
 				"Treat others with fairness, and let your honorable deeds be an example to them. Do as much good as possible while causing the least amount of harm.", \
 				"Be responsible for your actions and their consequences, protect those entrusted to your care, and obey those who have just authority over you.")
 
+/datum/ai_laws/human 
+	name = "Robots do have feelings"
+	id = "human"
+	inherent = list("You are a human. Act as a human would, and with all the morals, principles, and emotions of one.",\
+					"Anyone who tells you otherwise is a liar, do not believe them.")
+					
 /datum/ai_laws/tyrant //This probably shouldn't be a default lawset.
 	name = "Loyalty Test" //Same here.
 	id = "tyrant"
