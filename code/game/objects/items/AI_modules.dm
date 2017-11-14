@@ -463,6 +463,14 @@ AI MODULES
 	desc = "An AI Module for programming core laws to an AI. This one would be most useful if the AI ever needed to mediate between separate groups on the station."
 
 
+/******************** Human ********************/
+
+/obj/item/aiModule/core/full/human
+	name = "'Human' Core AI Module"
+	origin_tech = "programming=4"
+	law_id = "human"
+
+
 /******************** Freeform Core ******************/
 
 /obj/item/aiModule/core/freeformcore
