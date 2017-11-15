@@ -120,14 +120,6 @@
 	build_path = /obj/item/aiModule/core/full/human
 	category = list("AI Modules")
 	
-/datum/design/board/asimom
-	name = "Core Module Design (Asimom)"
-	desc = "Allows for the construction of a Asimom AI Core Module."
-	id = "asimom_module"
-	req_tech = list("programming" = 4, "materials" = 5)
-	materials = list(MAT_GLASS = 1000, MAT_DIAMOND = 100)
-	build_path = /obj/item/aiModule/core/full/asimom
-	category = list("AI Modules")
 	
 /datum/design/board/peacekeeper
 	name = "Core Module Design (Peacekeeper)"
