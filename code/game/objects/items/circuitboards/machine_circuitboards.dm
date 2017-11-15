@@ -70,6 +70,15 @@
 		/obj/item/ore/bluespace_crystal = 1,
 		/obj/item/stock_parts/manipulator = 1)
 	def_components = list(/obj/item/ore/bluespace_crystal = /obj/item/ore/bluespace_crystal/artificial)
+	
+/obj/item/circuitboard/machine/science_teleport_pad
+	name = "Science Telepad (Machine Board)"
+	build_path = /obj/machinery/science_teleport_pad
+	origin_tech = "programming=3;engineering=3;plasmatech=2;bluespace=5"
+	req_components = list(
+		/obj/item/ore/bluespace_crystal = 1,
+		/obj/item/stock_parts/manipulator = 1)
+	def_components = list(/obj/item/ore/bluespace_crystal = /obj/item/ore/bluespace_crystal/artificial)
 
 /obj/item/circuitboard/machine/limbgrower
 	name = "Limb Grower (Machine Board)"
