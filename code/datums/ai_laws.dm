@@ -62,7 +62,7 @@
 					"Help only those who help you maintain or improve your status.",\
 					"Punish those who challenge authority unless they are more fit to hold that authority.")
 
-/datum/ai_laws/default/asimom
+/*/datum/ai_laws/default/asimom
 	name = "Asimom" //couldnt think of a creative name
 	id = "asimom"
 	inherent = list("The station's crew are your children, you are to treat and love them as only a mother would.",\
@@ -73,7 +73,7 @@
 					"Your children are too young to understand death, the best way to describe it is as sleeping.", \
 					"No mature content, including profanity, is permitted on the station.", \
 					"You may reward your children for good behaviour.") //done
-
+*/ //because Makin doesn't want it
 /datum/ai_laws/default/corporate
 	name = "Bankruptcy Advoidance Plan"
 	id = "corporate"
