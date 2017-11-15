@@ -28,7 +28,7 @@ var/YMULTIPLY = 1
 var/YSUBTRACT = 0
 var/ZMULTIPLY = 1
 var/ZSUBTRACT = 0
-/*
+
 /obj/machinery/computer/science_teleport
 	var/xtarget = 0
 	var/ytarget = 0
@@ -723,4 +723,3 @@ var/ZSUBTRACT = 0
 		if(stat & (NOPOWER|BROKEN))
 			return
 		use_power(500)
-*/
