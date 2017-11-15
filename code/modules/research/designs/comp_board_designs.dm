@@ -107,6 +107,14 @@
 	req_tech = list("programming" = 3, "magnets" = 2, "biotech" = 2)
 	build_path = /obj/item/circuitboard/computer/crew
 	category = list("Computer Boards")
+	
+/datum/design/board/telesciconsole
+	name = "Computer Design (Telescience console)"
+	desc = "Allows for the construction of circuit boards used to build a Telescience console."
+	id = "crewconsole"
+	req_tech = list("programming" = 3, "bluespace" = 4)
+	build_path = /obj/item/circuitboard/computer/telesci
+	category = list("Computer Boards")
 
 /datum/design/board/secdata
 	name = "Computer Design (Security Records Console)"
