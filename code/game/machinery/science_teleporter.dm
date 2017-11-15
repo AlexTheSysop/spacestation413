@@ -56,11 +56,11 @@ var/ZSUBTRACT = 0
 	New()
 		link_pad()
 
-		XMULTIPLY = pick(1,2,4) //If it is three, perfect precision is impossible because fractions will be recurring.
-		XSUBTRACT = rand(0,100)
-		YMULTIPLY = pick(1,2,4) // same as above
-		YSUBTRACT = rand(0,100)
-		ZSUBTRACT = rand(0,world.maxz)
+		XMULTIPLY = 1 /*pick(1,2,4)*/ //If it is three, perfect precision is impossible because fractions will be recurring.
+		XSUBTRACT = 0 /*rand(0,100)*/
+		YMULTIPLY = 1 /*pick(1,2,4)*/ // same as above
+		YSUBTRACT = 0 /*rand(0,100)*/
+		ZSUBTRACT = 0 /*rand(0,world.maxz)*/
 
 	proc/link_pad()
 		if (!linked_pad)
