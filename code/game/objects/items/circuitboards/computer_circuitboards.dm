@@ -12,6 +12,11 @@
 	name = "Message Monitor (Computer Board)"
 	build_path = /obj/machinery/computer/message_monitor
 	origin_tech = "programming=2"
+	
+/obj/item/circuitboard/science_teleport
+	name = "Circuit board (Science Teleporter)"
+	build_path = "/obj/machinery/computer/science_teleport"
+	origin_tech = "bluespace=5"
 
 /obj/item/circuitboard/computer/security
 	name = "Security Cameras (Computer Board)"
