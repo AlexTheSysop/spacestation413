@@ -206,6 +206,11 @@
 	name = "Crew Monitoring Console (Computer Board)"
 	build_path = /obj/machinery/computer/crew
 	origin_tech = "programming=2;biotech=2"
+	
+/obj/item/circuitboard/computer/telesci
+	name = "Advanced Teleporter Console (Computer Board)"
+	build_path = /obj/machinery/computer/telesci
+	origin_tech = "programming=2;bluespace=4"
 
 /obj/item/circuitboard/computer/mech_bay_power_console
 	name = "Mech Bay Power Control Console (Computer Board)"
