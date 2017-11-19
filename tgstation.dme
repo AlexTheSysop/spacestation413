@@ -14,6 +14,7 @@
 
 // BEGIN_INCLUDE
 #include "_maps\basemap.dm"
+#include "_maps\RandomZLevels\research.dmm"
 #include "code\_compile_options.dm"
 #include "code\world.dm"
 #include "code\__DATASTRUCTURES\globals.dm"

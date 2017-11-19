@@ -16628,6 +16628,7 @@
 "aOP" = (
 /obj/effect/landmark/blobstart,
 /obj/item/toy/beach_ball/holoball,
+/obj/item/card/emag/bluespace,
 /turf/open/floor/plating,
 /area/crew_quarters/bar)
 "aOQ" = (
@@ -22339,6 +22340,7 @@
 	dir = 8
 	},
 /obj/item/aiModule/core/full/custom,
+/obj/item/aiModule/core/full/asimom,
 /turf/open/floor/plasteel/black,
 /area/ai_monitored/turret_protected/ai_upload)
 "bec" = (
