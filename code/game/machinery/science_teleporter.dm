@@ -81,7 +81,7 @@ var/ZSUBTRACT = 0
 			link_pad()
 
 			if (!linked_pad)
-				boutput(user, "There is no teleporter pad linked to this console.")
+				to_chat(user, "There is no teleporter pad linked to this console.")
 				return
 
 		var/dat = ""
@@ -114,19 +114,19 @@ var/ZSUBTRACT = 0
 			return
 
 		if (!linked_pad)
-			boutput(usr, "There is no teleporter pad linked to this console.")
+			to_chat(usr, "There is no teleporter pad linked to this console.")
 			return
 
 		if (href_list["scan"])
 			var/turf/target = doturfcheck(0)
 			if(!target)
-				boutput(usr, " ")
-				boutput(usr, "<span style=\"color:green\">Scan Results:</span>")
-				boutput(usr, "<span style=\"color:green\">No Atmosphere.</span>")
+				to_chat(usr, " ")
+				to_chat(usr, "<span style=\"color:green\">Scan Results:</span>")
+				to_chat(usr, "<span style=\"color:green\">No Atmosphere.</span>")
 				return
 			else
-				boutput(usr, " ")
-				boutput(usr, "<span style=\"color:green\">Scan Results:</span>")
+				to_chat(usr, " ")
+				to_chat(usr, "<span style=\"color:green\">Scan Results:</span>")
 				if(!istype(target, /turf/space))
 					var/datum/gas_mixture/GM = target.return_air()
 					var/burning = 0
@@ -134,9 +134,9 @@ var/ZSUBTRACT = 0
 						var/turf/simulated/T = target
 						if(T.active_hotspot)
 							burning = 1
-					boutput(usr, "<span style=\"color:green\">Atmosphere: Oxy:[GM.oxygen], Tox:[GM.toxins], Nit:[GM.nitrogen], Car:[GM.carbon_dioxide],  [GM.temperature] Kelvin, [GM.return_pressure()] kPa, [(burning)?("<span style=\"color:red\">BURNING</span>"):(null)]")
+					to_chat(usr, "<span style=\"color:green\">Atmosphere: Oxy:[GM.oxygen], Tox:[GM.toxins], Nit:[GM.nitrogen], Car:[GM.carbon_dioxide],  [GM.temperature] Kelvin, [GM.return_pressure()] kPa, [(burning)?("<span style=\"color:red\">BURNING</span>"):(null)]")
 				else
-					boutput(usr, "<span style=\"color:green\">No Atmosphere.</span>")
+					to_chat(usr, "<span style=\"color:green\">No Atmosphere.</span>")
 			src.updateUsrDialog()
 			return
 
@@ -159,7 +159,7 @@ var/ZSUBTRACT = 0
 
 		if (href_list["addbookmark"])
 			if(bookmarks.len >= max_bookmarks)
-				boutput(usr, "<span style=\"color:red\">Maximum number of Bookmarks reached.</span>")
+				to_chat(usr, "<span style=\"color:red\">Maximum number of Bookmarks reached.</span>")
 				return
 			var/datum/teleporter_bookmark/bm = new
 			var/title = input(usr,"Enter name:","Name","New Bookmark") as text
@@ -235,11 +235,11 @@ var/ZSUBTRACT = 0
 
 		else if (href_list["send"])
 			if (!linked_pad)
-				boutput(usr, "There is no teleporter pad linked to this console.")
+				to_chat(usr, "There is no teleporter pad linked to this console.")
 				return
 
 			if(linked_pad.recharging)
-				boutput(usr, "The teleport pad is still recharging!")
+				to_chat(usr, "The teleport pad is still recharging!")
 				return
 
 			src.linked_pad.icon_state = "pad1"
@@ -250,7 +250,7 @@ var/ZSUBTRACT = 0
 			if(!turfcheck)
 				src.badsend()
 			else if(!is_allowed(turfcheck))
-				boutput(usr, "Unknown interference prevents teleportation to that location!")
+				to_chat(usr, "Unknown interference prevents teleportation to that location!")
 			else
 				src.send(turfcheck)
 			sleep(5)
@@ -264,11 +264,11 @@ var/ZSUBTRACT = 0
 
 		else if (href_list["receive"])
 			if (!linked_pad)
-				boutput(usr, "There is no teleporter pad linked to this console.")
+				to_chat(usr, "There is no teleporter pad linked to this console.")
 				return
 
 			if(linked_pad.recharging)
-				boutput(usr, "The teleport pad is still recharging!")
+				to_chat(usr, "The teleport pad is still recharging!")
 				return
 
 			src.linked_pad.icon_state = "pad1"
@@ -279,7 +279,7 @@ var/ZSUBTRACT = 0
 			if(!turfcheck)
 				src.badreceive()
 			else if(!is_allowed(turfcheck))
-				boutput(usr, "Unknown interference prevents teleportation from that location!")
+				to_chat(usr, "Unknown interference prevents teleportation from that location!")
 			else
 				src.receive(turfcheck)
 			sleep(5)
@@ -293,11 +293,11 @@ var/ZSUBTRACT = 0
 
 		else if (href_list["portal"])
 			if (!linked_pad)
-				boutput(usr, "There is no teleporter pad linked to this console.")
+				to_chat(usr, "There is no teleporter pad linked to this console.")
 				return
 
 			if(linked_pad.recharging)
-				boutput(usr, "The teleport pad is still recharging!")
+				to_chat(usr, "The teleport pad is still recharging!")
 				return
 
 			src.linked_pad.icon_state = "pad1"
@@ -308,7 +308,7 @@ var/ZSUBTRACT = 0
 			if(!turfcheck)
 				src.badreceive()
 			else if(!is_allowed(turfcheck))
-				boutput(usr, "Unknown interference prevents creation of a portal to or from that location!")
+				to_chat(usr, "Unknown interference prevents creation of a portal to or from that location!")
 			else
 				src.doubleportal(turfcheck)
 			sleep(5)
@@ -322,7 +322,7 @@ var/ZSUBTRACT = 0
 
 		else if (href_list["delportal"])
 			if(!portals)
-				boutput(usr, "No active portals detected!")
+				to_chat(usr, "No active portals detected!")
 			else
 				for(var/obj/P in portals)
 					portals -= P //not sure if this is necessary. better safe than sorry
@@ -347,9 +347,9 @@ var/ZSUBTRACT = 0
 		if (!xisbad && !yisbad && !zisbad)
 			realturf = locate(realx, realy, realz)
 		if (notify_invalid)
-			if (xisbad) boutput(usr, "<span style=\"color:red\">X coordinate invalid.</span>")
-			if (yisbad) boutput(usr, "<span style=\"color:red\">Y coordinate invalid.</span>")
-			if (zisbad) boutput(usr, "<span style=\"color:red\">Z coordinate invalid.</span>")
+			if (xisbad) to_chat(usr, "<span style=\"color:red\">X coordinate invalid.</span>")
+			if (yisbad) to_chat(usr, "<span style=\"color:red\">Y coordinate invalid.</span>")
+			if (zisbad) to_chat(usr, "<span style=\"color:red\">Z coordinate invalid.</span>")
 		return realturf
 
 	proc/is_allowed(var/turf/T)
@@ -364,7 +364,7 @@ var/ZSUBTRACT = 0
 
 	proc/send(var/turf/target)
 		if (!target)
-			boutput(usr, "Unknown interference prevents teleportation to that location!")
+			to_chat(usr, "Unknown interference prevents teleportation to that location!")
 			return
 		var/list/stuff = list()
 		for(var/atom/movable/O as obj|mob in src.linked_pad.loc)
@@ -388,7 +388,7 @@ var/ZSUBTRACT = 0
 
 	proc/receive(var/turf/receiveturf)
 		if(!receiveturf)
-			boutput(usr, "Unknown interference prevents teleportation from that location!")
+			to_chat(usr, "Unknown interference prevents teleportation from that location!")
 			return
 		var/list/stuff = list()
 		for(var/atom/movable/O as obj|mob in receiveturf)
@@ -409,7 +409,7 @@ var/ZSUBTRACT = 0
 
 	proc/doubleportal(var/turf/target)
 		if (!target)
-			boutput(usr, "Unknown interference prevents teleportation to that location!")
+			to_chat(usr, "Unknown interference prevents teleportation to that location!")
 			return
 		var/list/send = list()
 		var/list/receive = list()
@@ -481,7 +481,7 @@ var/ZSUBTRACT = 0
 		processbadeffect(effect)
 
 	proc/processbadeffect(var/effect)
-		switch(effect)
+		/*switch(effect)
 			if("")
 				return
 			if("flash")
@@ -706,8 +706,8 @@ var/ZSUBTRACT = 0
 						P.set_loc(src.linked_pad.loc)
 					if("ancient")
 						var/obj/critter/ancient_thing/P = new /obj/critter/ancient_thing
-						P.set_loc(src.linked_pad.loc)
-				return
+						P.set_loc(src.linked_pad.loc)*/
+		return
 
 /obj/machinery/science_teleport_pad
 	icon = 'icons/obj/stationobjs.dmi'
@@ -723,3 +723,7 @@ var/ZSUBTRACT = 0
 		if(stat & (NOPOWER|BROKEN))
 			return
 		use_power(500)
+
+
+
+	return src
