@@ -47,7 +47,9 @@
 	color = "#20A300" //rgb: 32, 163, 0
 	toxpwr = 4
 	metabolization_rate = 1.25 * REAGENTS_METABOLISM
+	overdose_threshold = 55
 	taste_description = "KIWIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII"
+	var/deathtime = 0
 
 /datum/reagent/toxin/gusherkiwi/on_mob_life(mob/living/M)
 	if(current_cycle == 1)
@@ -56,6 +58,19 @@
 		to_chat(M, "<span class='danger'>You feel like something exploded in your groin!</span>")
 		. = 1
 	..()
+
+/datum/reagent/toxin/gusherkiwi/overdose_process(mob/living/M) //fucking GIBS you after a few seconds
+	to_chat(M, "<span class='danger'>You feel pressure building up in your groin...</span>")
+	if(ishuman(M))
+		deathtime += 1
+	if(deathtime >= 10)
+		M.visible_message("<span class='userdanger'>Holy shit! [M] explodes into a bloody mess!</span>")
+		M.adjustBruteLoss(1000)
+		M.spawn_gibs()
+		M.spill_organs()
+		M.spread_bodyparts()
+	..()
+	return
 
 /datum/reagent/medicine/gusherphlegm
 	name = "Hellacious Blue Phlegm Aneurysm Gusher Juice"
@@ -113,7 +128,7 @@
 	M.Jitter(5)
 	M.adjustToxLoss(3)
 
-/datum/reagent/drug/gushercherry/overdose_process(mob/living/M)
+/datum/reagent/drug/gushercherry/overdose_process(mob/living/M) //don't do cherry kids
 	M.AdjustStun(100, 0)
 	M.AdjustKnockdown(100, 0)
 	M.adjustStaminaLoss(3, 0)
