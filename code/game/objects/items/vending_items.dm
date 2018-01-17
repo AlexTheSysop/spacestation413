@@ -49,7 +49,7 @@
 /obj/item/vending_refill/snack
 	machine_name = "Getmore Chocolate Corp"
 	charges = list(14, 2, 0)//of 42 standard, 6 contraband
-	init_charges = list(12, 2, 0)
+	init_charges = list(14, 2, 0)
 
 /obj/item/vending_refill/cola
 	machine_name = "Robust Softdrinks"
@@ -66,8 +66,8 @@
 /obj/item/vending_refill/autodrobe
 	machine_name = "AutoDrobe"
 	icon_state = "refill_costume"
-	charges = list(32, 2, 3)// of 96 standard, 6 contraband, 9 premium
-	init_charges = list(32, 2, 3)
+	charges = list(32, 3, 3)// of 96 standard, 7 contraband, 9 premium
+	init_charges = list(32, 3, 3)
 
 /obj/item/vending_refill/clothing
 	machine_name = "ClothesMate"

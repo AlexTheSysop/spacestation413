@@ -38,3 +38,34 @@
 	id = "gusherphlegm"
 	results = list("gusherphlegm" = 2)
 	required_reagents = list("gushertropical" = 1, "tricordrazine" = 1)
+
+/datum/chemical_reaction/gusherblueberry
+	name = "Bluespace Blueberry Genetic Reshuffle Gusher Juice"
+	id = "gusherblueberry"
+	results = list("gusherblueberry" = 2)
+	required_reagents = list("bluespace" = 1, "gusherphlegm" = 3)
+
+/datum/chemical_reaction/gusherdragonfruit
+	name = "Passionate Pitaya Plasma Flood Gusher Juice"
+	id = "gusherdragonfruit"
+	results = list("gusherdragonfruit" = 1)
+	required_reagents = list("gushertropical" = 1, "clf3" = 1, "plasma" = 1)
+
+/datum/chemical_reaction/gusherwatermelon
+	name = "Woody Got Watermelon Gusher Juice"
+	id = "gusherwatermelon"
+	results = list("gusherwatermelon" = 3)
+	required_reagents = list("watermelonjuice" = 1, "grapejuice" = 1, "whiskey" = 1)
+
+/datum/chemical_reaction/gusherjackfruit
+	name = "Joyful Johnvris Jackfruit Gusher Juice"
+	id = "gusherjackfruit"
+	results = list("gusherjackfruit" = 4)
+	required_reagents = list("gusherwatermelon" = 1, "cream" = 5)
+
+//Troll Mutation Toxin
+/datum/chemical_reaction/troll_mutation_toxin
+	name = "Troll Mutation Toxin"
+	id = "trollmutationtoxin"
+	results = list("trollmutationtoxin" = 1)
+	required_reagents = list("unstablemutationtoxin" = 1, "tab" = 1)

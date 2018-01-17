@@ -80,7 +80,7 @@ GLOBAL_LIST_INIT(maintenance_loot, list(
 	//obj/item/gun/ballistic/revolver/russian = 1, //disabled until lootdrop is a proper world proc.
 	/obj/item/hand_labeler = 1,
 	/obj/item/paper/crumpled = 1,
-	/obj/item/pen = 1,
+	/obj/item/reagent_containers/food/snacks/gushers/date/packet = 1,
 	/obj/item/reagent_containers/spray/pestspray = 1,
 	/obj/item/reagent_containers/glass/rag = 3,
 	/obj/item/stock_parts/cell = 3,
