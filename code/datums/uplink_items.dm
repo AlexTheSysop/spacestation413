@@ -1343,10 +1343,22 @@ GLOBAL_LIST_EMPTY(uplink_items) // Global list so we only initialize this once.
 
 /datum/uplink_item/role_restricted/gushers
 	name = "Treacherous Teal Tangerine Fruit Gushers"
-	desc = "A highly deadly poison, the target will only taste something bitter as they slowly die. However, you need to blend up this box's contents to get it in pure form."
+	desc = "A highly deadly poison, the target will  barely taste this as they slowly die. Targets will be unable to speak. However, you need to blend up this box's contents to get it in pure form."
 	item = /obj/item/reagent_containers/food/snacks/gushers/syndie
-	cost = 2
+	cost = 3
 	restricted_roles = list("Bartender", "Chemist", "Chef")
+
+/datum/uplink_item/role_restricted/gusherswgw
+	name = "Woody Got Watermelon Fruit Gushers"
+	desc = "A box of bootlegged gushers, recovered from the quarters of some librarian. Heals you rapidly, but makes you lose control over your speech."
+	cost = 4
+	restricted_roles = list("Curator")
+
+/datum/uplink_item/role_restricted/gusherswgw2
+	name = "Joyful Johnvris Jackfruit Fruit Gushers"
+	desc = "A box of bootlegged gushers, recovered en masse from a clown's toy box. Heals you rapidly,  but makes you lose control over your speech."
+	cost = 4
+	restricted_roles = list("Clown")
 
 // Pointless
 /datum/uplink_item/badass
